@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.venv/
+venv/
+*.joblib
+*.pkl
+.DS_Store
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
