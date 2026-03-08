@@ -1,0 +1,66 @@
+{
+  "model": "StackedEnsemble_RF_GB",
+  "base_learners": [
+    "RandomForest(120)",
+    "GradientBoosting(80)"
+  ],
+  "meta_learner": "LogisticRegression",
+  "features": [
+    "frequency_mhz",
+    "bandwidth_khz",
+    "duration_sec",
+    "snr_db",
+    "drift_rate_hz_s",
+    "pulse_interval_sec",
+    "encoding_density",
+    "bearing_deg",
+    "elevation_deg",
+    "polarization_ratio",
+    "spectral_kurtosis",
+    "prime_interval_flag",
+    "hydrogen_line_delta",
+    "snr_per_bw",
+    "density_snr_prod",
+    "near_h_line",
+    "has_pulse"
+  ],
+  "n_features": 17,
+  "dataset": {
+    "total_rows": 12000,
+    "train_rows": 9600,
+    "test_rows": 2400,
+    "anomaly_rate_pct": 22.0
+  },
+  "test_metrics": {
+    "auc_roc": 1.0,
+    "auc_pr": 1.0,
+    "f1_score": 1.0,
+    "optimal_threshold": 0.9981,
+    "confusion_matrix": [
+      [
+        1872,
+        0
+      ],
+      [
+        0,
+        528
+      ]
+    ]
+  },
+  "feature_importance": {
+    "encoding_density": 0.318308,
+    "density_snr_prod": 0.217087,
+    "snr_per_bw": 0.120568,
+    "bandwidth_khz": 0.110814,
+    "bearing_deg": 0.078365,
+    "hydrogen_line_delta": 0.061467,
+    "snr_db": 0.039048,
+    "spectral_kurtosis": 0.022912,
+    "near_h_line": 0.010431,
+    "prime_interval_flag": 0.008062,
+    "polarization_ratio": 0.003841,
+    "has_pulse": 0.003693,
+    "drift_rate_hz_s": 0.002513
+  },
+  "training_time_sec": 17.1
+}
